@@ -1,0 +1,33 @@
+    <%- include('partials/header.ejs') %>
+        <h1>Welcome to blog site</h1>
+    </header>
+    <main class="container">
+        
+        <% if(locals.blogs && locals.blogs.length > 0) { %>
+            <form action="/blogForm" method="GET">
+                <input type="submit" value="Write a blog">
+            </form>
+            <%blogs.forEach((blog)=> { %>
+                <div class="blogContainer">
+                    <h2><%=blog.title %></h2>
+                    <p><%=blog.details %></p>
+                    <div class="blogEditDeleteContainer">
+                        <form action="/edit" method="GET">
+                            <input type="hidden" name="id" value="<%= blog.id %>" />
+                            <input type="submit" value="Edit this blog">
+                        </form>
+                        <form action="/delete" method="POST">
+                            <input type="hidden" name="_method" value="DELETE" />
+                            <input type="hidden" name="id" value="<%= blog.id %>" />
+                            <input type="submit" value="Delete this blog">
+                        </form>
+                    </div>
+                </div>
+            <%}) %>
+        <% } else { %>
+            <h2>No blog found</h2>
+            <form action="/blogForm" method="GET">
+                <input type="submit" value="Go to form">
+            </form>
+        <% } %>
+    <%- include('partials/footer.ejs') %>

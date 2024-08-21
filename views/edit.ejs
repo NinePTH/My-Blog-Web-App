@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %>
+    <h1>Edit the blog</h1>
+</header>
+<main class="container">
+    <div class="formContainer">
+        <form action="/submitEdit" method="POST">
+            <input type="hidden" name="_method" value="PATCH" />
+            <input type="hidden" name="id" value="<%= id %>" />
+            <label for="blogTitle">Blog title</label><br>
+            <input type="text" id="blogTitle" name="blogTitle" placeholder="Why backend so hard."><br>
+            <label for="details">details</label><br>
+            <input type="text" id="details" name="details" placeholder="Please send help."><br>
+            <input type="submit" value="Post a blog">
+        </form>
+    </div>
+<%- include('partials/footer.ejs') %>

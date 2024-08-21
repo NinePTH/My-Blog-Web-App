@@ -1,0 +1,14 @@
+    <%- include('partials/header.ejs') %>
+        <h1>Form of blog</h1>
+    </header>
+    <main class="container">
+        <div class="formContainer">
+            <form action="/submit" method="POST">
+                <label for="blogTitle">Blog title</label><br>
+                <input type="text" id="blogTitle" name="blogTitle" placeholder="Why backend so hard." required><br>
+                <label for="details">details</label><br>
+                <input type="text" id="details" name="details" placeholder="Please send help." required><br>
+                <input type="submit" value="Post a blog">
+            </form>
+        </div>
+    <%- include('partials/footer.ejs') %>
