@@ -86,7 +86,7 @@ form[action="/blogForm"] {
   width: 50%;
 }
 
-form[action="/blogForm"] input[value="Write a blog"] {
+form[action="/blogForm"] input[value="Write a blog"], form[action="/blogForm"] input[value="Go to form"] {
   font-size: 1.25rem;
 }
 
