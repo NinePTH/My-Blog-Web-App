@@ -1,17 +1,23 @@
 import express from "express"
 import bodyParser from "body-parser"
+import ejs from 'ejs';
 import methodOverride from "method-override"
 import { dirname } from "path";
+import path from "path";
 import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"))
+app.use(express.static(__dirname + "/public"))
 
-// ! ใช้ไม่ได้ app.use(methodOverride('_method'));
+app.set("view engine", "ejs");
+app.engine("ejs", ejs.__express); // Add this line to set the templating engine
+app.set("views", path.join(__dirname, "./views")); // Assuming 'views' is in same level as root folder
+
+// ! ใช้ app.use(methodOverride('_method')); ไม่ได้
 
 // * Allow method override, supporting the header and body at the same time
 app.use(methodOverride('X-HTTP-METHOD-OVERRIDE')) // look at the header
