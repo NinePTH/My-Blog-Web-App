@@ -86,8 +86,13 @@ form[action="/blogForm"] {
   width: 50%;
 }
 
-form[action="/blogForm"] input[value="Write a blog"], form[action="/blogForm"] input[value="Go to form"] {
+form[action="/blogForm"] {
   font-size: 1.25rem;
+  min-width: 330px;
+}
+
+form[action="/blogForm"] input[value="Write a blog"], form[action="/blogForm"] input[value="Go to form"] {
+  font-size: inherit;
 }
 
 .blogContainer{
@@ -98,6 +103,7 @@ form[action="/blogForm"] input[value="Write a blog"], form[action="/blogForm"] i
   flex-direction: column;
   gap: 1rem;
   width: 50%;
+  min-width: 330px;
   margin: 1rem;
   color: #fff;
   /* background-color: #212121; */
@@ -111,7 +117,12 @@ form[action="/blogForm"] input[value="Write a blog"], form[action="/blogForm"] i
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 1rem;
+}
+
+.blogEditDeleteContainer > * {
+  flex: 1;
 }
 
 /* .blogEditDeleteContainer input[type=button], .blogEditDeleteContainer input[type=submit] {
@@ -171,4 +182,8 @@ footer {
   100% {
     background-position: 0% 50%;
   }
+}
+
+@media screen and (max-width: 788px) {
+  
 }
