@@ -48,15 +48,25 @@ app.get("/blogForm", (req, res) => {
 
 app.get("/edit", (req, res) => {
     console.log(`Received a ${req.method} request with id: ${req.query.id}`);
-    res.render("edit.ejs",{id: req.query.id});
+    res.render("edit.ejs",{id: req.query.id, dateTime: req.query.dateTime});
 });
 
 
 app.post("/submit", (req, res) => {
+    let date = new Date()
+    let s = (date.getSeconds()<10?'0':'') + date.getSeconds();
+    let m = (date.getMinutes()<10?'0':'') + date.getMinutes();
+    let h = (date.getHours()<10?'0':'') + date.getHours();
+    let day = date.getDate(); 
+    let month = date.getMonth() + 1;  
+    let year = date.getFullYear(); 
+    let blogDateTime = `${year}-${month}-${day} ${h}:${m}:${s}`
+
     let blog = {
         id: blogs.length + 1,
         title: req.body.blogTitle,
-        details: req.body.details
+        details: req.body.blogDetails,
+        dateTime: blogDateTime
     }
     blogs.push(blog);
     console.table(blogs)
@@ -66,10 +76,12 @@ app.post("/submit", (req, res) => {
 app.patch("/submitEdit", (req, res) => {
     console.log(`Received a ${req.method} request with id: ${req.body.id}`);
     const blogId = req.body.id;
+    const blogDateTime = req.body.blogDateTime;
     const updatedBlog = {
         id: parseInt(blogId),
         title: req.body.blogTitle,
-        details: req.body.details
+        details: req.body.blogDetails,
+        dateTime: blogDateTime
     };
     blogs[blogId - 1] = updatedBlog
     console.table(blogs)

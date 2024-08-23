@@ -11,9 +11,11 @@
                 <div class="blogContainer">
                     <h2><%=blog.title %></h2>
                     <p><%=blog.details %></p>
+                    <p>Published on <%=blog.dateTime %></p>
                     <div class="blogEditDeleteContainer">
                         <form action="/edit" method="GET">
                             <input type="hidden" name="id" value="<%= blog.id %>" />
+                            <input type="hidden" name="dateTime" value="<%= blog.dateTime %>" />
                             <input type="submit" value="Edit this blog">
                         </form>
                         <form action="/delete" method="POST">
