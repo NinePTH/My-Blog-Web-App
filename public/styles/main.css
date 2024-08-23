@@ -113,6 +113,15 @@ form[action="/blogForm"] input[value="Write a blog"], form[action="/blogForm"] i
   -webkit-backdrop-filter: blur(5px);
 }
 
+.blogDateTime {
+  text-align: end;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #ffffff9c;
+  margin-top: 1rem;
+
+}
+
 .blogEditDeleteContainer {
     display: flex;
     align-items: center;
