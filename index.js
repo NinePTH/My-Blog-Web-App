@@ -42,6 +42,11 @@ app.get("/", (req, res) => {
     }
 })
 
+// New route to view all blogs in JSON format
+app.get("/viewAllBlogs", (req, res) => {
+    res.json(blogs);
+});
+
 app.get("/blogForm", (req, res) => {
     res.render("blogForm.ejs")
 })
