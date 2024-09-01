@@ -12,3 +12,5 @@ if (blogs.length == 0) {
 }
 ```
 <br> This is not acceptable, please solve it. Otherwise, I will not accept your pull request.
+
+But if you are my university friend, please contact me on my Instagram.
