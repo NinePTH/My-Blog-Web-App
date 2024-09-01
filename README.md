@@ -1,5 +1,5 @@
 # Contributor Should have standard
-To contributors who want to resolve my project's issue. You need to follow good contributor standards such as giving the pull request a meaningful name and using my official specific branch of each issue.<br><br>
+To contributors who want to resolve my project's issue. You need to follow good contributor standards atleast giving the pull request a meaningful name and using my official specific branch of each issue.<br><br>
 
 If you want to contribute to an easy issue in this project, please <strong>COMPLETE</strong> the easy issue and don't leave even a <strong>single easy bug</strong> because it is not acceptable.<br><br>
 
