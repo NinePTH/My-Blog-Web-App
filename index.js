@@ -33,6 +33,10 @@ app.use(methodOverride(function(req, res){ // ALSO look in the body
 
 let blogs = []
 
+app.get("viewAllBlogs", (req, res) => {
+    res.json({ data: blogs })
+})
+
 app.get("/", (req, res) => {
     if (blogs.length != 0){
         res.render("home.ejs", {blogs: blogs})
