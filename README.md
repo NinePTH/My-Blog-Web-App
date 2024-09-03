@@ -13,6 +13,6 @@ if (blogs.length == 0) {
 ```
 <br> This is not acceptable, please solve it. Otherwise, I will not accept your pull request.
 
-Please do not install any new package that I didn't use in this project without my permission.
+Please do not use any new package that I didn't use in this project (you can see it in package.json).
 
 If you are my college friend, please contact me on my Instagram.
