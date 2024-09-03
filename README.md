@@ -1,5 +1,5 @@
-# Contributor Should have standard
-To contributors who want to resolve my project's issue. You need to follow good contributor standards atleast giving the pull request a meaningful name and using my official specific branch of each issue.<br><br>
+# Contributor must have standard
+To contributors who want to resolve my project's issue. You need to follow good contributor standards at least giving the pull request a meaningful name and using my official specific branch of each issue.<br><br>
 
 If you want to contribute to an easy issue in this project, please <strong>COMPLETE</strong> the easy issue and don't leave even a <strong>single easy bug</strong> because it is not acceptable.<br><br>
 
@@ -13,4 +13,6 @@ if (blogs.length == 0) {
 ```
 <br> This is not acceptable, please solve it. Otherwise, I will not accept your pull request.
 
-But if you are my college friend, please contact me on my Instagram.
+Please do not install any new package that I didn't use in this project.
+
+If you are my college friend, please contact me on my Instagram.
